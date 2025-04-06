@@ -14,6 +14,7 @@ class ConsoleRacingGame(
         val racingGame = RacingGame(inputNames)
         val round = inputView.inputRound()
         val cars = racingGame.cars
+        outputView.printRaceStart()
         repeat(round) {
             racingGame.play()
             outputView.printRaceProgress(cars)

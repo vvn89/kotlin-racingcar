@@ -3,13 +3,11 @@ package racingcar.view
 import racingcar.domain.Car
 
 class OutputView {
-    private var round = 1
+    fun printRaceStart() {
+        println("\n실행 결과")
+    }
 
     fun printRaceProgress(players: List<Car>) {
-        if (round == 1) {
-            println("\n실행 결과")
-        }
-        round++
         players.forEach { println("${it.name} : ${symbol(it.location)}") }
         println()
     }
